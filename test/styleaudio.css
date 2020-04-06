@@ -1,0 +1,24 @@
+.flex_container {
+    border: 1px solid lighten(#acacac, 20%);
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    margin: 4rem 0 4rem 0;
+    width: 600px;
+}
+
+.player_image {
+    flex: 1;
+
+}
+
+.player_control {
+    flex: 1;
+}
+
+.footer {
+    flex: 0.5;
+    background-color: rgb(0, 195, 255);
+}

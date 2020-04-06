@@ -1,0 +1,37 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<div class="flex_container">
+    <div class="player_image">
+        <img src="alexander-popov-hTv8aaPziOQ-unsplash_small.jpg">
+    </div>
+    <div class="player_control">
+        <audio controls id="player">
+            <source id="src" src="../dummy.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    <div class="footer">
+        <p>Col 2</p>
+    </div>
+</div>
+
+
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="styleaudio.css" />
+</head>
+<script>
+    var queryURL = "https://l5u9hr6r1f.execute-api.us-east-1.amazonaws.com/staging/fact"
+    $(document).ready(function () {
+        $.getJSON(queryURL, function (data) {
+            var clipToPlay = data.base + data.clip;
+            document.getElementById('player').src = data;
+        });
+    });
+</script>
+
+
+
+
+</html>

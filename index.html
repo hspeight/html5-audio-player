@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Music Links</title>
+
+  <!-- Include font -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,400i" rel="stylesheet">
+
+
+  <!-- Include Amplitude JS -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/amplitudejs@5.0.3/dist/amplitude.js"></script>
+
+  <!-- Include Style Sheet -->
+  <link rel="stylesheet" type="text/css" href="css/app.css" />
+</head>
+
+<body>
+  <div class="question">
+    <p>What [category] is in the [title/artist] of this [year] top [##] song</p>
+  </div>
+  <div id="single-song-player">
+    <img data-amplitude-song-info="cover_art_url" />
+    <div class="bottom-container">
+      <progress class="amplitude-song-played-progress" id="song-played-progress"></progress>
+
+      <div class="time-container">
+        <span class="current-time">
+          <span class="amplitude-current-minutes"></span>:<span class="amplitude-current-seconds"></span>
+        </span>
+        <span class="duration">
+          <span class="amplitude-duration-minutes"></span>:<span class="amplitude-duration-seconds"></span>
+        </span>
+      </div>
+
+      <div class="control-container">
+        <div class="amplitude-play-pause" id="play-pause"></div>
+        <div class="meta-container">
+          <span data-amplitude-song-info="name" class="song-name"></span>
+          <span data-amplitude-song-info="artist"></span>
+        </div>
+
+      </div>
+      
+    </div>
+    
+  </div>
+
+  <!--
+			Include UX functions JS
+		-->
+  <script type="text/javascript" src="js/functions.js">
+  console.log(Amplitude.getSongAtIndex( {index} ))
+  </script>
+
+</body>
+<footer>
+  <div class="attribution-container">
+    <p>Image courtesy of<br>
+      <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, "
+        ;San Francisco";, ";Helvetica Neue" ;, Helvetica, Ubuntu, Roboto, Noto, ";Segoe UI" ;, Arial,
+        sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px"
+        href="https://unsplash.com/@5tep5?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge"
+        target="_blank" rel="noopener noreferrer"
+        title="Download free do whatever you want high-resolution photos from Alexander Popov"><span
+          style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg"
+            style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white"
+            viewBox="0 0 32 32">
+            <title>unsplash-logo</title>
+            <path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path>
+          </svg></span><span style="display:inline-block;padding:2px 3px">Alexander Popov</span></a>
+    </p>
+    </div>
+</footer>
+
+</html>
